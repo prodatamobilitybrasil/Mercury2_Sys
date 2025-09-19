@@ -1,0 +1,79 @@
+Tabelas básicas / Parâmetros do Sistema
+Tabelas básicas / Emissor
+Tabelas básicas / Tipos de Deficiências
+Tabelas básicas / Equipamentos para Deficientes
+Tabelas básicas / Tipo de Provedores
+Tabelas básicas / Tipos de Usuário
+Tabelas básicas / Tipos de Razões
+Tabelas básicas / Razões
+Tabelas básicas / Tipos de Estudantes
+Tabelas básicas / Estados
+Tabelas básicas / Regiões
+Tabelas básicas / Sub-Regiões
+Tabelas básicas / Cidades
+Tabelas básicas / Tipos de Endereços
+Tabelas básicas / Tipos de Email
+Tabelas básicas / Tipos de Telefone
+Tabelas básicas / Tipos de Documento
+Tabelas básicas / Tipos de Aprovação
+Financeiro / Bancos
+Funções / Funções da Aplicação
+Aplicação / Aplicação Master
+Aplicação / Aplicações
+Aplicação / Grupos Estatísticos
+Aplicação / Contador Estatístico
+Modais / Empresas
+Modais / Garagens
+Modais / Recebedorias
+Modais / Relacionamento de Funcionários
+Modais / Relacionamento de Empresas
+Relatórios / Linhas
+Relatórios / Impressoras Remotas
+Relatórios / Grupos de Aplicações
+Relatórios / Aplicações
+Cartão / Desenhos do Cartão
+Cartão / Templates do Cartão
+Cartão / Tipos de Cartão
+Cartão / Tipos de Período
+Cartão / Preços dos Cartões
+Validador / Mensagens
+Validador / Displays do Validador
+Validador / Funções do Operador
+Validador / Integração / Integrações
+Validador / Integração / Grupos de Tempo
+Validador / Integração / Períodos
+Validador / Integração / Limites de Tempo
+Validador / Cargos
+Validador / Tipos de Função
+Validador / Períodos de Recarga
+Validador / Limites de Tempo
+Validador / Grupos de Tempo
+Validador / Motivos de Lista Negra
+Validador / Linhas
+Validador / Automatização de Tarifas
+Validador / Grupo de Linhas
+Validador / Tipos de Descontos
+Validador / Feriados
+Validador / Funções do Validador
+Validador / Seleção de Grupo de Linhas
+Validador / Pontos de Trechos
+Validador / Trechos
+Validador / Recibos
+Validador / Uso de Restrição de Grupos
+Validador / Integração por tipo de cartão
+Validador / Grupos de Cargos de Operador
+Validador / Biometria Facial
+Eod / Locais de Exportação
+Eod / Locais de Exportação FTP Server
+Eod / RDO Informações de Parâmetros
+Segurança / Softwares
+Segurança / Tipos de Softwares
+Segurança / Tipos de Dados
+Segurança / Idiomas
+Segurança / Formulários
+Segurança / Módulos
+Segurança / Privilégios de Acesso
+Segurança / Grupos de Usuários do Sistema
+Segurança / Objetos
+Segurança / Tipos de Objetos
+Segurança / Tradução em Massa

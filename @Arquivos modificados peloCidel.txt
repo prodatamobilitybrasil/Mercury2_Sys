@@ -1,0 +1,32 @@
+C:\Spark\Mercury2_Sys_ERRO\AppSparkSysMain.pas(588): //  FrmSparkSysMain.stMain.Repaint;  //cidel-
+C:\Spark\Mercury2_Sys_ERRO\AppSparkSysMain.pas(973): Screen.Cursor:=crHourGlass;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\AppSparkSysMain.pas(974): FormAguarde.lblPosi.Caption:='Inicialização dos BANCOS'; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\AppSparkSysMain.pas(975): FormAguarde.Show; Application.ProcessMessages; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\AppSparkSysMain.pas(984): Screen.Cursor:=crDefault;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uDmSys1.pas(1013): {       S:=''; //cidel debug
+C:\Spark\Mercury2_Sys_ERRO\uFrmBaseSys.pas(61):   do Try aTables[I].Open;  //cidel+ colocação do try
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(765):      salvaCodTrecho: String; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(766):      dbMemoria: TStringList; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(830):    edtLinha.SetFocus; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(831):   FormAguarde.Hide; Application.ProcessMessages;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(1589):           salvaCodTrecho:='';  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(1592):           montaDBMemoria; //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(1713):           salvaCodTrecho:=DmSys.cdsLineDetailsXZones.FieldByName('COD_TRECHO').AsString;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(2174): procedure TFrmLineMT.dbgDrawColumnCell(Sender: TObject;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(2193): procedure TFrmLineMT.btnSelectAplicacaoClick(Sender: TObject); //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(2221): procedure TFrmLineMT.EditGroupInteKeyPress(Sender: TObject; var Key: Char); //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(2227): procedure TFrmLineMT.EditGroupInteKeyDown(Sender: TObject; var Key: Word;  //cidel+
+C:\Spark\Mercury2_Sys_ERRO\uFrmLineMT.pas(2316):   // Verificação de duplicidade cidel
+C:\Spark\Mercury2_Sys_ERRO\uLineDiscounts.pas(128):  Var TimeSta, TimeEnd : TDateTime;  // , DateSta, DateEnd  cidel-
+C:\Spark\Mercury2_Sys_ERRO\uLineIntegration.pas(401): // Count : Integer; cidel-
+C:\Spark\Mercury2_Sys_ERRO\uLineIntegration.pas(402): // cdsCalcClearing : TClientDataSet;   cidel-
+C:\Spark\Mercury2_Sys_ERRO\uLineIntegration.pas(403): // X, Y : Integer;  cidel-
+C:\Spark\Mercury2_Sys_ERRO\uLineIntegration.pas(528): //Var   cidel-
+C:\Spark\Mercury2_Sys_ERRO\uLineIntegration.pas(529): // I : integer; cidel-
+C:\Spark\Mercury2_Sys_ERRO\uNewIntegration.pas(181): //  I, vRow : Integer; cidel-
+C:\Spark\Mercury2_Sys_ERRO\uNewIntegration.pas(201): //  I, vRow : Integer;  cidel-
+C:\Spark\Mercury2_Sys_ERRO\uNewIntegration.pas(276): // I,j : Integer;   cidel-
+C:\Spark\Mercury2_Sys_ERRO\uNewIntegration.pas(277): // X, Y : Integer; cidel-
+C:\Spark\Mercury2_Sys_ERRO\uSoftwares.pas(517):   S:='';  //cidel debug
+C:\Spark\Mercury2_Sys_ERRO\uSoftwares.pas(523):   S:='';  //cidel debug
+C:\Spark\Mercury2_Sys_ERRO\uSoftwares.pas(527):   ShowMessage(S); //cidel+

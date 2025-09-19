@@ -1,0 +1,23 @@
+# Ignora o script de criacao do repositorio
+CriarRepositorio_Github.bat
+ECHO est† desativado.
+# Arquivos temporarios do Windows
+Thumbs.db
+Desktop.ini
+ECHO est† desativado.
+# Logs
+*.log
+ECHO est† desativado.
+# Backups
+*.bak
+*.tmp
+*.old
+ECHO est† desativado.
+# Configura√ß√µes de IDE
+.vscode/
+*.code-workspace
+ECHO est† desativado.
+# Diretorios de build
+bin/
+obj/
+dist/

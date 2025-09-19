@@ -1,0 +1,985 @@
+inherited frmCardLevelPrices: TfrmCardLevelPrices
+  Tag = 106
+  Width = 750
+  Height = 530
+  Caption = 'Pre'#231'os de Cart'#245'es'
+  Constraints.MinHeight = 530
+  Constraints.MinWidth = 750
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited cbBase: TCoolBar
+    Width = 742
+    Bands = <
+      item
+        Control = tbBase
+        ImageIndex = -1
+        MinHeight = 24
+        Width = 738
+      end>
+    inherited tbBase: TToolBar
+      Width = 725
+      inherited tbtnFiltrar: TToolButton
+        Action = nil
+        OnClick = tbtnFiltrarClick
+      end
+      inherited tbtnNew2: TToolButton
+        Visible = False
+      end
+    end
+  end
+  inherited pcBaseCadastro: TPageControl
+    Width = 742
+    Height = 448
+    ActivePage = tsBaseCadastroConsulta
+    OnChange = pcBaseCadastroChange
+    inherited tsBaseCadastroFiltro: TTabSheet
+      inherited Splitter_Base1: TSplitter
+        Top = 72
+        Width = 734
+      end
+      inherited gbGrid: TGroupBox
+        Top = 76
+        Width = 734
+        Height = 344
+        inherited grdResultado: TDBGrid
+          Width = 730
+          Height = 327
+          DataSource = dtsMaster
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CLP_ID'
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CLP_DESC'
+              Title.Caption = 'Descri'#231#227'o'
+              Width = 300
+              Visible = True
+            end>
+        end
+      end
+      inherited pnFiltro: TPanel
+        Width = 734
+        Height = 72
+        inherited pnPesq: TPanel
+          Width = 734
+          Height = 72
+          inherited gbfiltroavansado: TGroupBox
+            Width = 730
+            Height = 68
+            inherited pnVoltar: TPanel
+              Top = 53
+              Width = 726
+              inherited lblBack: TLabel
+                Left = 699
+              end
+            end
+          end
+          inherited gbFiltro: TGroupBox
+            Width = 730
+            Height = 68
+            object Label1: TLabel [0]
+              Tag = 3239
+              Left = 8
+              Top = 12
+              Width = 48
+              Height = 13
+              Caption = 'Descricao'
+            end
+            inherited pnPesquiza: TPanel
+              Top = 53
+              Width = 726
+              inherited lblAdvancedSearch: TLabel
+                Width = 726
+                Visible = False
+              end
+            end
+            object rdgFilterStatus: TRadioGroup
+              Tag = 1045
+              Left = 324
+              Top = 12
+              Width = 149
+              Height = 40
+              Caption = 'Status'
+              Columns = 2
+              ItemIndex = 0
+              Items.Strings = (
+                'Ativo'
+                'Inativo')
+              TabOrder = 1
+            end
+            object btnCardDesign: TBitBtn
+              Tag = 3241
+              Left = 532
+              Top = 24
+              Width = 75
+              Height = 25
+              Caption = 'Cart'#245'es'
+              TabOrder = 2
+              OnClick = btnCardDesignClick
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555555FFFFFFFF5555555000000005555555577777777FF555550999999900
+                55555575555555775F55509999999901055557F55555557F75F5001111111101
+                105577FFFFFFFF7FF75F00000000000011057777777777775F755070FFFFFF0F
+                01105777F555557F75F75500FFFFFF0FF0105577F555FF7F57575550FF700008
+                8F0055575FF7777555775555000888888F005555777FFFFFFF77555550000000
+                0F055555577777777F7F555550FFFFFF0F05555557F5FFF57F7F555550F000FF
+                0005555557F777557775555550FFFFFF0555555557F555FF7F55555550FF7000
+                05555555575FF777755555555500055555555555557775555555}
+              NumGlyphs = 2
+            end
+            object eDesc: TEdit
+              Left = 8
+              Top = 29
+              Width = 305
+              Height = 21
+              CharCase = ecUpperCase
+              TabOrder = 3
+            end
+            object btnHotList: TBitBtn
+              Tag = 3242
+              Left = 636
+              Top = 24
+              Width = 75
+              Height = 25
+              Caption = 'HotList'
+              TabOrder = 4
+              OnClick = btnHotListClick
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555550555
+                555555555555F55555555505555B0555570555F55557F55555F55B50555B0555
+                7B55575F5557F555575555B5055B5557B5555575F55755557555555B5550005B
+                55555557555FFF575555555555BBB0055555555555777FF5555555555BBBBB00
+                55555555577777FF55555000BBBBBBB050005FFF7777777F5FFFBBB5BBBBBBB0
+                BBB577757777777F77755555BBBBBBB55555555577777775555555555BBBBB55
+                55555555577777555555555705BBB55505555555F5777555F555557B5555055B
+                505555575555F5575F5557B5555B0555B50555755557F55575F55B55555B0555
+                5B5557555557F55557555555555B555555555555555755555555}
+              NumGlyphs = 2
+            end
+          end
+        end
+      end
+    end
+    inherited tsBaseCadastroConsulta: TTabSheet
+      object pnlTop: TPanel
+        Left = 0
+        Top = 0
+        Width = 734
+        Height = 85
+        Align = alTop
+        BevelOuter = bvNone
+        TabOrder = 0
+        object grpTop: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 734
+          Height = 85
+          Align = alClient
+          TabOrder = 0
+          object Label2: TLabel
+            Tag = 3239
+            Left = 12
+            Top = 20
+            Width = 48
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+          end
+          object dbedDescricao: TDBEdit
+            Left = 12
+            Top = 36
+            Width = 357
+            Height = 21
+            CharCase = ecUpperCase
+            DataField = 'CLP_DESC'
+            DataSource = dtsMaster
+            TabOrder = 0
+          end
+          object dbrdStatus: TDBRadioGroup
+            Tag = 3255
+            Left = 424
+            Top = 20
+            Width = 185
+            Height = 45
+            Caption = 'Status'
+            Columns = 2
+            DataField = 'CLP_STATUS'
+            DataSource = dtsMaster
+            Items.Strings = (
+              'Ativo'
+              'Inativo')
+            TabOrder = 1
+            Values.Strings = (
+              'A'
+              'I')
+          end
+        end
+      end
+      object pnl: TPanel
+        Left = 0
+        Top = 85
+        Width = 734
+        Height = 127
+        Align = alTop
+        BevelOuter = bvNone
+        TabOrder = 1
+        object nbSubGruposMT: TNotebook
+          Left = 0
+          Top = 0
+          Width = 734
+          Height = 127
+          Align = alClient
+          TabOrder = 0
+          OnPageChanged = nbSubGruposMTPageChanged
+          object TPage
+            Left = 0
+            Top = 0
+            Caption = 'tabPesqMT'
+            object grdCardLevelPrices: TDBGrid
+              Left = 21
+              Top = 0
+              Width = 713
+              Height = 127
+              Align = alClient
+              DataSource = dtsCardLevelPricesValidity
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect]
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CLPVAL_SEQNBR'
+                  Title.Caption = 'C'#243'digo'
+                  Visible = False
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CLPVAL_STARTDATE'
+                  Title.Caption = 'In'#237'cio'
+                  Width = 80
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CLPVAL_ENDDATE'
+                  Title.Caption = 'Final'
+                  Width = 80
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'CLPVAL_PRICE'
+                  Title.Caption = 'Pre'#231'o'
+                  Width = 65
+                  Visible = True
+                end>
+            end
+            object pnlBtCLPValidity: TPanel
+              Left = 0
+              Top = 0
+              Width = 21
+              Height = 127
+              Align = alLeft
+              BevelOuter = bvNone
+              TabOrder = 1
+              object tbSystemUsers: TToolBar
+                Left = 0
+                Top = 0
+                Width = 23
+                Height = 127
+                Align = alLeft
+                AutoSize = True
+                EdgeBorders = []
+                Images = imglstBase
+                TabOrder = 0
+                object tbtnNewValidity: TToolButton
+                  Tag = 3235
+                  Left = 0
+                  Top = 2
+                  Enabled = False
+                  ImageIndex = 16
+                  Wrap = True
+                  OnClick = tbtnNewValidityClick
+                end
+                object tbtnEditValidity: TToolButton
+                  Tag = 3236
+                  Left = 0
+                  Top = 24
+                  Enabled = False
+                  ImageIndex = 10
+                  Wrap = True
+                  OnClick = tbtnEditValidityClick
+                end
+                object tbtnDeleteValidity: TToolButton
+                  Tag = 3237
+                  Left = 0
+                  Top = 46
+                  Enabled = False
+                  ImageIndex = 9
+                  OnClick = tbtnDeleteValidityClick
+                end
+              end
+            end
+          end
+          object TPage
+            Left = 0
+            Top = 0
+            Caption = 'tabEditMT'
+            object Label3: TLabel
+              Tag = 3245
+              Left = 12
+              Top = 20
+              Width = 27
+              Height = 13
+              Caption = 'In'#237'cio'
+            end
+            object Label4: TLabel
+              Tag = 3246
+              Left = 188
+              Top = 20
+              Width = 47
+              Height = 13
+              Caption = 'Expira'#231#227'o'
+            end
+            object Label5: TLabel
+              Left = 376
+              Top = 20
+              Width = 28
+              Height = 13
+              Caption = 'Pre'#231'o'
+            end
+            object btnSystemUsersOk: TBitBtn
+              Tag = 3232
+              Left = 15
+              Top = 92
+              Width = 70
+              Height = 22
+              Caption = 'Ok'
+              TabOrder = 1
+              OnClick = btnSystemUsersOkClick
+              Glyph.Data = {
+                DE010000424DDE01000000000000760000002800000024000000120000000100
+                0400000000006801000000000000000000001000000000000000000000000000
+                80000080000000808000800000008000800080800000C0C0C000808080000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+                3333333333333333333333330000333333333333333333333333F33333333333
+                00003333344333333333333333388F3333333333000033334224333333333333
+                338338F3333333330000333422224333333333333833338F3333333300003342
+                222224333333333383333338F3333333000034222A22224333333338F338F333
+                8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+                33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+                0000333333333A222433333333333338F338F33300003333333333A222433333
+                333333338F338F33000033333333333A222433333333333338F338F300003333
+                33333333A222433333333333338F338F00003333333333333A22433333333333
+                3338F38F000033333333333333A223333333333333338F830000333333333333
+                333A333333333333333338330000333333333333333333333333333333333333
+                0000}
+              NumGlyphs = 2
+            end
+            object btnSysUsersCancel: TBitBtn
+              Tag = 3233
+              Left = 99
+              Top = 92
+              Width = 75
+              Height = 22
+              Cancel = True
+              Caption = 'Cancelar'
+              TabOrder = 2
+              OnClick = btnSysUsersCancelClick
+              Glyph.Data = {
+                DE010000424DDE01000000000000760000002800000024000000120000000100
+                0400000000006801000000000000000000001000000000000000000000000000
+                80000080000000808000800000008000800080800000C0C0C000808080000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+                333333333333333333333333000033338833333333333333333F333333333333
+                0000333911833333983333333388F333333F3333000033391118333911833333
+                38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+                911118111118333338F3338F833338F3000033333911111111833333338F3338
+                3333F8330000333333911111183333333338F333333F83330000333333311111
+                8333333333338F3333383333000033333339111183333333333338F333833333
+                00003333339111118333333333333833338F3333000033333911181118333333
+                33338333338F333300003333911183911183333333383338F338F33300003333
+                9118333911183333338F33838F338F33000033333913333391113333338FF833
+                38F338F300003333333333333919333333388333338FFF830000333333333333
+                3333333333333333333888330000333333333333333333333333333333333333
+                0000}
+              NumGlyphs = 2
+            end
+            object dbrgStatus: TDBRadioGroup
+              Left = 568
+              Top = 19
+              Width = 137
+              Height = 37
+              Caption = 'Status'
+              Columns = 2
+              DataField = 'CLPVAL_STATUS'
+              DataSource = dtsCardLevelPricesValidity
+              Items.Strings = (
+                'Ativo'
+                'Inativo')
+              TabOrder = 0
+              Values.Strings = (
+                'A'
+                'I')
+            end
+            object dbdtStartDate: TDBDateEdit
+              Left = 12
+              Top = 36
+              Width = 121
+              Height = 21
+              DataField = 'CLPVAL_STARTDATE'
+              DataSource = dtsCardLevelPricesValidity
+              DialogTitle = 'Selecione uma data'
+              NumGlyphs = 2
+              TabOrder = 3
+              YearDigits = dyFour
+            end
+            object dbdtEndDate: TDBDateEdit
+              Left = 188
+              Top = 36
+              Width = 121
+              Height = 21
+              DataField = 'CLPVAL_ENDDATE'
+              DataSource = dtsCardLevelPricesValidity
+              DialogTitle = 'Selecione uma data'
+              NumGlyphs = 2
+              TabOrder = 4
+              YearDigits = dyFour
+            end
+            object dbcePrice: TRxDBCalcEdit
+              Left = 376
+              Top = 36
+              Width = 121
+              Height = 21
+              DataField = 'CLPVAL_PRICE'
+              DataSource = dtsCardLevelPricesValidity
+              DisplayFormat = ',0.00'
+              NumGlyphs = 2
+              TabOrder = 5
+            end
+          end
+        end
+      end
+      object pnlCardDesign: TPanel
+        Left = 0
+        Top = 212
+        Width = 364
+        Height = 208
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 2
+        object PageControl1: TPageControl
+          Left = 0
+          Top = 0
+          Width = 364
+          Height = 208
+          ActivePage = TabSheet1
+          Align = alClient
+          TabOrder = 0
+          object TabSheet1: TTabSheet
+            Tag = 3243
+            Caption = 'Card Design'
+            DesignSize = (
+              356
+              180)
+            object spbtIncAllCD: TSpeedButton
+              Left = 166
+              Top = 36
+              Width = 23
+              Height = 22
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00FF000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF000000000000000000FF00FF00000000000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400000000000000000000848400000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF000000000084840000848400000000000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00000000008484000084840000000000008484000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF000000000084840000848400000000000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400000000000000000000848400000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF000000000000000000FF00FF00000000000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00FF000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtIncAllCDClick
+            end
+            object spbtIncOneCD: TSpeedButton
+              Left = 166
+              Top = 64
+              Width = 23
+              Height = 22
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00848400008484000000000000000000000000
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0084840000848400008484000084840000848400008484
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0084840000848400008484000084840000848400008484
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00848400008484000000000000000000000000
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtIncOneCDClick
+            end
+            object spbtDelOneCD: TSpeedButton
+              Left = 166
+              Top = 92
+              Width = 23
+              Height = 22
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000000084840000FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000000000000000000000000000848400008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400008484000084840000848400008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400008484000084840000848400008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000000000000000000000000000848400008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000000084840000FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtDelOneCDClick
+            end
+            object spbtDelAllCD: TSpeedButton
+              Left = 166
+              Top = 120
+              Width = 23
+              Height = 22
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0084840000FF00FF00FF00FF008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000084840000FF00FF008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                00008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                0000848400008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                00008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000084840000FF00FF008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0084840000FF00FF00FF00FF008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtDelAllCDClick
+            end
+            object dbgCardDesign: TDBGrid
+              Left = 200
+              Top = 0
+              Width = 156
+              Height = 180
+              Align = alRight
+              DataSource = dtsCardDesign
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CD_DESC'
+                  Title.Caption = 'Descri'#231#227'o'
+                  Width = 138
+                  Visible = True
+                end>
+            end
+            object DBGrid2: TDBGrid
+              Left = 0
+              Top = 0
+              Width = 156
+              Height = 180
+              Align = alLeft
+              DataSource = dtsCardLevelPricexCardDesign
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+              TabOrder = 1
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'CD_DESC'
+                  Title.Caption = 'Descri'#231#227'o'
+                  Width = 138
+                  Visible = True
+                end>
+            end
+          end
+        end
+      end
+      object pnlHotListReason: TPanel
+        Left = 364
+        Top = 212
+        Width = 370
+        Height = 208
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 3
+        object PageControl2: TPageControl
+          Left = 0
+          Top = 0
+          Width = 370
+          Height = 208
+          ActivePage = TabSheet2
+          Align = alClient
+          TabOrder = 0
+          object TabSheet2: TTabSheet
+            Tag = 3244
+            Caption = 'HotList Reasons'
+            object spbtIncAllHL: TSpeedButton
+              Left = 169
+              Top = 36
+              Width = 23
+              Height = 22
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00FF000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF000000000000000000FF00FF00000000000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400000000000000000000848400000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF000000000084840000848400000000000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00000000008484000084840000000000008484000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF000000000084840000848400000000000084840000848400008484
+                0000848400008484000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400000000000000000000848400000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF000000000000000000FF00FF00000000000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00FF000000
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtIncAllHLClick
+            end
+            object spbtIncOneHL: TSpeedButton
+              Left = 169
+              Top = 64
+              Width = 23
+              Height = 22
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00848400008484000000000000000000000000
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0084840000848400008484000084840000848400008484
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0084840000848400008484000084840000848400008484
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00848400008484000000000000000000000000
+                000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtIncOneHLClick
+            end
+            object spbtDelOneHL: TSpeedButton
+              Left = 169
+              Top = 92
+              Width = 23
+              Height = 22
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000000084840000FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000000000000000000000000000848400008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400008484000084840000848400008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000848400008484000084840000848400008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF0000000000000000000000000000000000848400008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000000084840000FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtDelOneHLClick
+            end
+            object spbtDelAllHL: TSpeedButton
+              Left = 169
+              Top = 120
+              Width = 23
+              Height = 22
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0084840000FF00FF00FF00FF008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000084840000FF00FF008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                00008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                0000848400008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF008484000084840000848400008484000084840000848400008484
+                00008484000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF008484000084840000FF00FF008484
+                000084840000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF0084840000FF00FF00FF00FF008484
+                0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+                FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+              OnClick = spbtDelAllHLClick
+            end
+            object dbgHotListReason: TDBGrid
+              Left = 201
+              Top = 0
+              Width = 161
+              Height = 180
+              Align = alRight
+              Anchors = [akLeft, akTop, akRight, akBottom]
+              DataSource = dtsHotListReason
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+              TabOrder = 0
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'HLR_DESC'
+                  Title.Caption = 'Descri'#231#227'o'
+                  Width = 142
+                  Visible = True
+                end>
+            end
+            object DBGrid4: TDBGrid
+              Left = 0
+              Top = 0
+              Width = 161
+              Height = 180
+              Align = alLeft
+              DataSource = dtsHotListReasonxCardLPrices
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+              TabOrder = 1
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'HLR_DESC'
+                  Title.Caption = 'Descri'#231#227'o'
+                  Width = 142
+                  Visible = True
+                end>
+            end
+          end
+        end
+      end
+    end
+  end
+  object dtsCardLevelPricesValidity: TDataSource
+    DataSet = dmSys1.cdsCardLevelPricesValidity
+    Left = 425
+    Top = 4
+  end
+  object dtsCardLevelPricexCardDesign: TDataSource
+    DataSet = dmSys1.cdsCardLevelPricesXCardDesign
+    Left = 633
+    Top = 8
+  end
+  object dtsHotListReasonxCardLPrices: TDataSource
+    DataSet = dmSys1.cdsHotListReasonXCardLPrices
+    Left = 693
+    Top = 8
+  end
+  object dtsHotListReason: TDataSource
+    DataSet = DmSys.cdsHotListReason
+    Left = 381
+    Top = 4
+  end
+  object dtsCardDesign: TDataSource
+    DataSet = DmSys.cdsCarddesignCad
+    Left = 453
+    Top = 40
+  end
+end
